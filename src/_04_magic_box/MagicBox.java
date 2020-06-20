@@ -5,6 +5,7 @@ package _04_magic_box;
  */
 
 
+import java.applet.AudioClip;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
@@ -15,11 +16,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class MagicBox extends JPanel implements Runnable, MouseListener {
-
+	
 	/*
 	 * We are going to hide secrets within the magic box. 
 	 * When the user clicks on a secret place, stuff will happen.
@@ -54,6 +56,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		frame.addMouseListener(this);
 	}
 
 	private void loadBackgroundImage() throws Exception {
@@ -73,13 +76,38 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		MediaPalace magic = new MediaPalace();
+		String yeet = "yeet.wav";
+		String pickle = "PICKLERICK.png";
+
+		AudioClip yeeet = magic.loadSound(yeet);
+        JLabel hi = magic.loadImageFromWithinProject(pickle); 
+	
 		
+		System.out.println(backgroundImage.getRGB(e.getX(), e.getY()));
+		
+		int one = -69429;
+		int two = -9911626;
+		int three = -596032;
+		if(backgroundImage.getRGB(e.getX(), e.getY())==one){
+			yeeet.play();
+		}
+		
+		else if(backgroundImage.getRGB(e.getX(), e.getY())==two){
+			magic.speak("hi i like to each chimichangas"); 
+		}
+		else if(backgroundImage.getRGB(e.getX(), e.getY())==three){                     
+		JFrame frame = new JFrame();
+		frame.add(hi);
+		frame.setVisible(true);
+		frame.pack();
+		}	
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+	
 	}
 
 	@Override
