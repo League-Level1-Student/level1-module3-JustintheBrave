@@ -94,7 +94,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		}
 		
 		else if(backgroundImage.getRGB(e.getX(), e.getY())==two){
-			magic.speak("hi i like to each chimichangas"); 
+			magic.speak("hi i like to eat chimichangas"); 
 		}
 		else if(backgroundImage.getRGB(e.getX(), e.getY())==three){                     
 		JFrame frame = new JFrame();
