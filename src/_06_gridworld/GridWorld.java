@@ -20,6 +20,7 @@ public class GridWorld {
 	Bug bug = new Bug();
 	Bug bugg = new Bug();
 	
+	
 	Location loca = new Location(0, 0);
 	Location locat = new Location(ran.nextInt(10), ran.nextInt(10));
 	
