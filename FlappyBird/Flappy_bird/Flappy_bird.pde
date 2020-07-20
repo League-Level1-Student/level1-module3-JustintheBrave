@@ -35,7 +35,11 @@ void draw(){
   System.exit(0); 
   }
   
-  if(birdX==rectX && birdY<=upperPipeHeight+pipeGap){
+  if(birdX>=rectX && birdX<= rectX+50 && birdY>=upperPipeHeight+pipeGap){
+   System.exit(0); 
+  }
+  
+   if(birdX>=rectX && birdX<= rectX+50 && birdY<=upperPipeHeight){
    System.exit(0); 
   }
   
