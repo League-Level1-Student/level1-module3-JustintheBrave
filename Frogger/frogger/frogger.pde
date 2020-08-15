@@ -55,9 +55,28 @@ boolean deathh = intersects(carr);
 boolean deathhh = intersects(carrr);
 boolean deathhhh = intersects(carrrr);
 
- 
+if(death==true){
+ frogY=700; 
+textSize(100);
+  text("L", 275, 375);
 }
 
+if(deathh==true){
+  frogY=700;
+  textSize(100);
+  text("L", 275, 375);
+}
+if(deathhh==true){
+ frogY=700; 
+ textSize(100);
+  text("L", 275, 375);
+}
+if(deathhhh==true){
+ frogY=700; 
+ textSize(100);
+  text("L", 275, 375);
+}
+}
 
 
 void keyPressed()
@@ -81,7 +100,7 @@ void keyPressed()
         }
     }
 }
-
+//frog dead
 boolean intersects(Car car) {
  if ((frogY > car.getY() && frogY < car.getY()+50) &&
                 (frogX > car.getX() && frogX < car.getX()+car.getSize())) {
@@ -91,6 +110,10 @@ boolean intersects(Car car) {
   return false;
  }
 }
+
+
+
+ //confusing stuff
  
 public class Car{
   int carX;
